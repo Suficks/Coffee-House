@@ -1,9 +1,10 @@
-@import '../../Styles/';
+@import '../../Styles';
 
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 
   @include inter (16px, 600, 24px);
   color: $color-dark;
@@ -36,7 +37,6 @@
 
     @include inter (16px, 600, 24px);
     color: $color-dark;
-    cursor: pointer;
   }
 
   .button::after,

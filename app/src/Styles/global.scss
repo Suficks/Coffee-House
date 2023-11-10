@@ -5,6 +5,10 @@ html {
   background-color: $color-light;
 }
 
+body {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -13,4 +17,8 @@ a {
 
 li {
   list-style: none
+}
+
+button {
+  cursor: pointer;
 }
