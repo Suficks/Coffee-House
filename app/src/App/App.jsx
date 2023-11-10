@@ -1,10 +1,10 @@
 import './styles/App.scss';
-import Header from './components/Header/Header.jsx'
+import Header from './Components/Header/Header.jsx'
 
 const App = () => {
   return (
-    <div className="App">
-
+    <div className="wrapper">
+      <Header />
     </div>
   );
 }

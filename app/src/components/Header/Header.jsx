@@ -1,10 +1,11 @@
+import 'Header.scss'
+import logo from ''
 
-const Header = ({ count, isTop }) => {
-
+const Header = () => {
   return (
-    <h1>
-      {count}
-    </h1>
+    <div className="header__wrapper">
+      <img src={logo} alt="logo" className="logo" />
+    </div>
   )
 }
 
