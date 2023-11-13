@@ -5,7 +5,7 @@ import Slider from "react-slick";
 const Favorite = () => {
   return (
     <section className="favorite" id="favorite">
-      <h1 className="title">Choose your <span className="italic">favorite</span> coffee</h1>
+      <h2 className="title">Choose your <span className="italic">favorite</span> coffee</h2>
       <div className="slider">
         <Slider
           dots={true}

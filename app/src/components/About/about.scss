@@ -1,0 +1,22 @@
+@import '../../Styles';
+
+.about {
+  margin-bottom: 100px;
+
+  .title {
+    margin: 0 0 40px;
+    @include inter (60px, 600, 75px);
+    color: $color-dark;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+
+  .box {
+    display: grid;
+    grid-row-gap: 40px;
+  }
+}
