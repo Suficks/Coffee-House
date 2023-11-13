@@ -6,7 +6,7 @@ import About4 from '../../Assets/about-pic-4.png'
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2 className="title">Resource is <span className="italic">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
       <div className="container">
         <div className="box">

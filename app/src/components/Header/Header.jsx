@@ -4,7 +4,7 @@ import { ReactComponent as Logo } from '../../Assets/logo.svg'
 
 const Header = () => {
   return (
-    <div className="header__wrapper">
+    <header className="header">
       <a href="#home">
         <Logo className="logo" alt="logo" />
       </a>
@@ -25,7 +25,7 @@ const Header = () => {
         </ul>
       </nav>
       <button className="button">Menu</button>
-    </div>
+    </header>
   )
 }
 
