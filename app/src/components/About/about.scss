@@ -21,18 +21,18 @@
   }
 
   .small {
-    max-height: 430px;
+    max-height: 423px;
     width: 100%;
-    border-radius: 20px;
-    object-fit: cover;
   }
 
   .wrap {
     overflow: hidden;
     border-radius: 20px;
+    max-height: 590px;
   }
 
   .aboutPic {
+    object-fit: cover;
     transition: 0.5s ease;
     transform: scale(1.1);
 

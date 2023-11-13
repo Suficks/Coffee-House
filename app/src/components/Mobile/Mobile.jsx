@@ -9,12 +9,12 @@ const Mobile = () => {
       <div className="info">
         <h2 className="title"><span className="italic">Download</span> our apps to start ordering</h2>
         <p className="subtitle">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
-        <button className="store">
+        <a href="https://www.apple.com/app-store" target="_blank" className="store" rel="noreferrer">
           <img className="storeImg" src={store} alt="store" />
-        </button>
-        <button className="store google">
+        </a>
+        <a href="https://play.google.com/store/apps" target="_blank" className="store google" rel="noreferrer">
           <img className="storeImg" src={google} alt="store" />
-        </button>
+        </a>
       </div>
       <img src={MobileScreens} className="screens" alt="screens" />
     </section>
