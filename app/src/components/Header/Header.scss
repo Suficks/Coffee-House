@@ -50,15 +50,15 @@
     height: 2px;
 
     background-color: $color-dark;
-    transition: 0.7s ease;
+    transition: 0.4s ease;
     transform: scaleX(0);
-    animation: hide 0.7s ease;
+    animation: hide 0.4s ease;
   }
 
   .button:hover:after,
   .item:hover:after {
     transform: scaleX(1);
-    animation: show 0.7s ease;
+    animation: show 0.4s ease;
   }
 
   @keyframes hide {

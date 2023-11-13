@@ -1,0 +1,52 @@
+@import '../../Styles';
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+
+  color: $color-dark;
+
+  .info {
+    max-width: 630px;
+  }
+
+  .title {
+    margin: 0 0 40px;
+    @include inter (60px, 600, 75px);
+  }
+
+  .subtitle {
+    margin: 0 0 40px;
+    @include inter (16px, 400, 24px);
+  }
+
+  .store {
+    padding: 0;
+
+    border-radius: 100px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.4s ease;
+
+    line-height: 0;
+
+    &:hover {
+      background-color: $color-dark-brown;
+    }
+
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+
+  .storeImg {
+    transition: 0.3s ease;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(197%) hue-rotate(345deg) brightness(94%) contrast(88%);
+    }
+  }
+}

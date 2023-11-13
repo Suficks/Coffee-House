@@ -3,6 +3,7 @@ import Header from '../Components/Header'
 import Enjoy from '../Components/Enjoy';
 import Favorite from '../Components/Favorite';
 import About from '../Components/About';
+import Mobile from '../Components/Mobile';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Enjoy />
       <Favorite />
       <About />
+      <Mobile />
     </div>
   );
 }
