@@ -1,0 +1,119 @@
+@import '../../Styles';
+
+.favorite {
+  margin-bottom: 100px;
+  text-align: center;
+  color: $color-dark;
+
+  .title {
+    margin: 0 0 40px;
+    @include inter (60px, 600, 75px);
+  }
+
+  .slider {
+    position: relative;
+  }
+
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+    width: 60px;
+    height: 60px;
+
+    font-size: 0;
+    border: 1px solid $color-dark;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.3s ease;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url('../../Assets/slider-prev.svg') no-repeat;
+
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background-color: $color-dark-brown;
+    }
+
+    &:hover:after {
+      filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(197%) hue-rotate(345deg) brightness(94%) contrast(88%);
+    }
+  }
+
+  .slick-next {
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .slick-disabled {
+    cursor: auto;
+  }
+
+  .slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-dots li {
+    width: 40px;
+    height: 4px;
+
+    font-size: 0;
+    border: none;
+    border-radius: 100px;
+    background-color: $color-dark-light;
+  }
+
+  .slick-dots li button {
+    display: none;
+  }
+
+  .slick-dots .slick-active {
+    background-color: $color-dark-brown;
+  }
+
+  .item {
+    margin-bottom: 20px;
+  }
+
+  .name,
+  .cost {
+    margin: auto;
+    margin-bottom: 16px;
+    max-width: 480px;
+    @include inter (24px, 600, 30px);
+  }
+
+  .cost {
+    margin-bottom: 40px;
+  }
+
+  .description {
+    margin: auto;
+    margin-bottom: 16px;
+    max-width: 480px;
+    @include inter (16px, 400, 24px);
+  }
+}
