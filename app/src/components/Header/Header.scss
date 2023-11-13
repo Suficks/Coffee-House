@@ -60,24 +60,4 @@
     transform: scaleX(1);
     animation: show 0.4s ease;
   }
-
-  @keyframes hide {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
-
-  @keyframes show {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
 }
