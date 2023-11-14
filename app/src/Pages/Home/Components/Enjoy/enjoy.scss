@@ -1,10 +1,10 @@
-@import '../../Styles';
+@import '../../../../Styles';
 
 .enjoy {
   padding: 100px;
   margin-bottom: 100px;
 
-  background: url('../../Assets/main.png') no-repeat;
+  background: url('../../../../Assets/main.png') no-repeat;
   border-radius: 40px;
 
   .text__wrap {
@@ -25,7 +25,8 @@
     color: $color-light;
   }
 
-  .button {
+  .link {
+    display: inline-block;
     position: relative;
     padding: 20px 78px;
 
@@ -50,7 +51,7 @@
 
       opacity: 0;
       transition: 0.6s ease;
-      background: url('../../Assets/cup.svg') no-repeat;
+      background: url('../../../../Assets/cup.svg') no-repeat;
     }
 
     &:hover {

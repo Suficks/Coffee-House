@@ -1,7 +1,7 @@
 import './mobile.scss';
-import MobileScreens from '../../Assets/mobile-screens.png';
-import store from '../../Assets/app-store.svg'
-import google from '../../Assets/google-play.svg'
+import MobileScreens from '../../../../Assets/mobile-screens.png';
+import store from '../../../../Assets/app-store.svg'
+import google from '../../../../Assets/google-play.svg'
 
 const Mobile = () => {
   return (

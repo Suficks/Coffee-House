@@ -1,0 +1,141 @@
+@import '../../Styles';
+
+.menu {
+  margin-bottom: 100px;
+  color: $color-dark;
+  text-align: center;
+
+  .title {
+    display: inline-block;
+    margin: 0 0 40px;
+    max-width: 800px;
+
+    @include inter (60px, 600, 75px);
+  }
+
+  .filter_container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .filter {
+    position: relative;
+    padding: 10px 13px 10px 47px;
+
+    background-color: transparent;
+    border: 1px solid $color-dark-light;
+    border-radius: 100px;
+    transition: 0.4s ease;
+
+    @include inter (16px, 600, 24px);
+    color: $color-dark;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translateY(-50%);
+      content: '';
+
+      background-color: $color-dark-light;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: 0.4s ease;
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+
+      content: '';
+      width: 16px;
+      height: 17px;
+    }
+
+    &:hover {
+      background-color: $color-dark-brown;
+      color: $color-light;
+    }
+
+    &:hover:before {
+      background-color: $color-light;
+    }
+  }
+
+  .coffee {
+    &:after {
+      background: url('../../Assets/coffee-icon.svg') no-repeat;
+    }
+  }
+
+  .tea {
+    &:after {
+      background: url('../../Assets/tea-icon.svg') no-repeat;
+    }
+  }
+
+  .dessert {
+    &:after {
+      background: url('../../Assets/dessert-icon.svg') no-repeat;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+
+    color: $color-dark
+  }
+
+  .menuItem {
+    max-height: 506px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    text-align: start;
+    border: 1px solid $color-dark-light;
+  }
+
+  .info {
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+  }
+
+  .wrap {
+    overflow: hidden;
+    border-radius: 40px;
+    max-height: 308px;
+
+    cursor: pointer;
+  }
+
+  .itemPic {
+    max-width: 100%;
+    transition: 0.5s ease;
+    transform: scale(1.1);
+
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  .name {
+    margin: 21px 0 12px;
+    @include inter (24px, 600, 30px);
+  }
+
+  .description {
+    margin: 0 0 36px;
+    @include inter (16px, 400, 24px);
+  }
+
+  .cost {
+    margin: 0;
+    @include inter (24px, 600, 30px);
+  }
+}

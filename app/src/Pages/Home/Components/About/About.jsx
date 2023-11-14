@@ -1,8 +1,8 @@
 import './about.scss'
-import About1 from '../../Assets/about-pic-1.png'
-import About2 from '../../Assets/about-pic-2.png'
-import About3 from '../../Assets/about-pic-3.png'
-import About4 from '../../Assets/about-pic-4.png'
+import About1 from '../../../../Assets/about-pic-1.png'
+import About2 from '../../../../Assets/about-pic-2.png'
+import About3 from '../../../../Assets/about-pic-3.png'
+import About4 from '../../../../Assets/about-pic-4.png'
 
 const About = () => {
   return (

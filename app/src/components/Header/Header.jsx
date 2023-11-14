@@ -1,13 +1,13 @@
-import './header.scss'
-
-import { ReactComponent as Logo } from '../../Assets/logo.svg'
+import './header.scss';
+import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from '../../Assets/logo.svg';
 
 const Header = () => {
   return (
     <header className="header">
-      <a href="#home">
+      <Link to="/">
         <Logo className="logo" alt="logo" />
-      </a>
+      </Link>
       <nav className="nav">
         <ul className="list">
           <li className="item">
@@ -24,7 +24,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <button className="button">Menu</button>
+      <Link to="/menu" className="menuLink">Menu</Link>
     </header>
   )
 }

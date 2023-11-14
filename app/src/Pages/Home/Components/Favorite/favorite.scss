@@ -1,4 +1,4 @@
-@import '../../Styles';
+@import '../../../../Styles';
 
 .favorite {
   margin-bottom: 100px;
@@ -44,7 +44,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: url('../../Assets/slider-prev.svg') no-repeat;
+      background: url('../../../../Assets/slider-prev.svg') no-repeat;
 
       width: 24px;
       height: 24px;

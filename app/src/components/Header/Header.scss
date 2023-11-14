@@ -25,8 +25,9 @@
     position: relative;
   }
 
-  .button {
+  .menuLink {
     position: relative;
+    display: inline-block;
     width: 72px;
     padding: 0;
 
@@ -39,7 +40,7 @@
     color: $color-dark;
   }
 
-  .button::after,
+  .menuLink::after,
   .item::after {
     position: absolute;
     bottom: -2px;
@@ -55,7 +56,7 @@
     animation: hide 0.4s ease;
   }
 
-  .button:hover:after,
+  .menuLink:hover:after,
   .item:hover:after {
     transform: scaleX(1);
     animation: show 0.4s ease;

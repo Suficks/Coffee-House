@@ -1,6 +1,6 @@
-import Coffee1 from '../../Assets/coffee-slider-1.png'
-import Coffee2 from '../../Assets/coffee-slider-2.png'
-import Coffee3 from '../../Assets/coffee-slider-3.png'
+import Coffee1 from '../../../../Assets/coffee-slider-1.png'
+import Coffee2 from '../../../../Assets/coffee-slider-2.png'
+import Coffee3 from '../../../../Assets/coffee-slider-3.png'
 
 export const options = [
   {
