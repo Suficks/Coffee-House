@@ -94,7 +94,7 @@
   }
 
   .menuItem {
-    max-height: 506px;
+    height: 506px;
     box-sizing: border-box;
     border-radius: 40px;
     text-align: start;
@@ -102,6 +102,9 @@
   }
 
   .info {
+    display: flex;
+    flex-direction: column;
+    min-height: 39%;
     padding: 0 20px 20px;
     box-sizing: border-box;
   }
@@ -130,12 +133,18 @@
   }
 
   .description {
-    margin: 0 0 36px;
+    margin: 0;
+    flex: 1 1 auto;
     @include inter (16px, 400, 24px);
   }
 
   .cost {
     margin: 0;
     @include inter (24px, 600, 30px);
+  }
+
+  .active {
+    background-color: $color-dark-brown;
+    color: $color-light;
   }
 }
