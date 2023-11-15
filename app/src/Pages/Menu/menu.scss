@@ -5,6 +5,12 @@
   color: $color-dark;
   text-align: center;
 
+  .menuLink {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+
   .title {
     display: inline-block;
     margin: 0 0 40px;

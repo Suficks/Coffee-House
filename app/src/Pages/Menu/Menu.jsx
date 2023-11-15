@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import './menu.scss';
-import '../../Components/UI/Filter/filter.scss';
 
 import MenuItem from './MenuItem';
 import Modal from './Modal';
@@ -18,7 +17,7 @@ const productsMap = {
 const Menu = () => {
   const [typeProduct, setTypeProduct] = useState('coffee');
   const [modalActive, setModalActive] = useState(false);
-  const [item, setItem] = useState({});
+  const [product, setProduct] = useState({});
   const nodeRef = useRef();
 
   return (
@@ -52,11 +51,11 @@ const Menu = () => {
           nodeRef={nodeRef}
         >
           <div className="container" ref={nodeRef}>
-            <MenuItem setActive={setModalActive} typeProduct={productsMap[typeProduct]} setItem={setItem} />
+            <MenuItem setActive={setModalActive} typeProduct={productsMap[typeProduct]} setProduct={setProduct} />
           </div>
         </CSSTransition>
       </SwitchTransition>
-      <Modal active={modalActive} setActive={setModalActive} typeProduct={typeProduct} item={item} />
+      <Modal active={modalActive} setActive={setModalActive} typeProduct={typeProduct} product={product} />
     </main>
   )
 }
