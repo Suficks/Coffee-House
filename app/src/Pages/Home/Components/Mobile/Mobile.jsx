@@ -5,7 +5,7 @@ import google from '../../../../Assets/google-play.svg'
 
 const Mobile = () => {
   return (
-    <section className="mobile" id="app">
+    <section className="mobile" id="mobile">
       <div className="info">
         <h2 className="title"><span className="italic">Download</span> our apps to start ordering</h2>
         <p className="subtitle">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>

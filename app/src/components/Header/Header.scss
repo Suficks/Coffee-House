@@ -6,8 +6,8 @@
   justify-content: space-between;
   margin-bottom: 22px;
 
-  @include inter (16px, 600, 24px);
   color: $color-dark;
+  @include inter (16px, 600, 24px);
 
   .logo {
     cursor: pointer;
@@ -23,6 +23,7 @@
 
   .item {
     position: relative;
+    cursor: pointer;
   }
 
   .menuLink {

@@ -4,6 +4,11 @@ import './header.scss';
 import { ReactComponent as Logo } from '../../Assets/logo.svg';
 
 const Header = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView();
+  };
+
   return (
     <header className="header">
       <Link to="/">
@@ -11,18 +16,10 @@ const Header = () => {
       </Link>
       <nav className="nav">
         <ul className="list">
-          <li className="item">
-            <a href="#favorite" className="link">Favorite coffee</a>
-          </li>
-          <li className="item">
-            <a href="#about" className="link">About</a>
-          </li>
-          <li className="item">
-            <a href="#app" className="link">Mobile app</a>
-          </li>
-          <li className="item">
-            <a href="#contact" className="link">Contact us</a>
-          </li>
+          <li className="item" onClick={() => scrollToSection('favorite')}>Favorite coffee</li>
+          <li className="item" onClick={() => scrollToSection('about')}>About</li>
+          <li className="item" onClick={() => scrollToSection('mobile')}>Mobile app</li>
+          <li className="item" onClick={() => scrollToSection('contact')}>Contact us</li>
         </ul>
       </nav>
       <Link to="/menu" className="menuLink">Menu</Link>
