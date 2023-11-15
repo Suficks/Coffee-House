@@ -3,7 +3,8 @@ import './header.scss';
 
 import { ReactComponent as Logo } from '../../Assets/logo.svg';
 
-const Header = () => {
+const Header = ({ location }) => {
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     section?.scrollIntoView();
@@ -22,7 +23,7 @@ const Header = () => {
           <li className="item" onClick={() => scrollToSection('contact')}>Contact us</li>
         </ul>
       </nav>
-      <Link to="/menu" className="menuLink">Menu</Link>
+      <Link to="/menu" className={`menuLink ${location === '/menu' ? 'menuLinkActive' : null}`}>Menu</Link>
     </header>
   )
 }

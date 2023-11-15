@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      <Header />
+      <Header location={location.pathname} />
       <SwitchTransition>
         <CSSTransition
           key={location.key}

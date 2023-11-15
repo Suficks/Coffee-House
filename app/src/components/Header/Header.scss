@@ -62,4 +62,10 @@
     transform: scaleX(1);
     animation: show 0.4s ease;
   }
+
+  .menuLinkActive {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
 }
