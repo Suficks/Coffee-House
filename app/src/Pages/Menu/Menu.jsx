@@ -1,12 +1,13 @@
+import { useState, useRef } from 'react';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import './menu.scss';
-import { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
+
 import MenuItem from './MenuItem';
 import { coffeeData } from './Data/coffee';
 import { teaData } from './Data/tea';
 import { dessertData } from './Data/desserts';
 
-const products = {
+const productsMap = {
   coffee: coffeeData,
   tea: teaData,
   dessert: dessertData,
@@ -14,6 +15,7 @@ const products = {
 
 const Menu = () => {
   const [typeProduct, setTypeProduct] = useState('coffee');
+  const nodeRef = useRef();
 
   return (
     <main className="menu">
@@ -38,14 +40,18 @@ const Menu = () => {
           Dessert
         </button>
       </div>
-      <CSSTransition
-        classNames="fade"
-        timeout={2100}
-      >
-        <div className="container">
-          <MenuItem typeProduct={products[typeProduct]} />
-        </div>
-      </CSSTransition>
+      <SwitchTransition>
+        <CSSTransition
+          classNames="fade"
+          timeout={600}
+          key={typeProduct}
+          nodeRef={nodeRef}
+        >
+          <div className="container" ref={nodeRef}>
+            <MenuItem typeProduct={productsMap[typeProduct]} />
+          </div>
+        </CSSTransition>
+      </SwitchTransition>
     </main>
   )
 }

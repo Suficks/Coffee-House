@@ -1,7 +1,8 @@
-import './app.scss';
 import { useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import './app.scss';
+
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Home from '../Pages/Home';
@@ -14,11 +15,11 @@ const App = () => {
   return (
     <div className="wrapper">
       <Header />
-      <TransitionGroup>
+      <SwitchTransition>
         <CSSTransition
           key={location.key}
           classNames="fade"
-          timeout={2100}
+          timeout={600}
           nodeRef={nodeRef}
         >
           <div ref={nodeRef}>
@@ -28,7 +29,7 @@ const App = () => {
             </Routes>
           </div>
         </CSSTransition>
-      </TransitionGroup>
+      </SwitchTransition>
       <Footer />
     </div>
   );

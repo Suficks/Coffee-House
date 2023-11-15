@@ -28,6 +28,26 @@ button {
   color: $color-brown;
 }
 
+.fade-enter {
+  opacity: 0;
+  // transition: 600ms ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  // transition: 600ms ease;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: 600ms ease;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: 600ms ease;
+}
+
 @keyframes hide {
   from {
     opacity: 1;
