@@ -1,0 +1,137 @@
+@import '../../../Styles';
+
+.modal {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: 100%;
+
+  padding: 16px;
+  box-sizing: border-box;
+
+  border-radius: 40px;
+  background-color: $color-light;
+  color: $color-dark;
+  transition: 0.4s ease;
+  pointer-events: none;
+  opacity: 0;
+
+  .pic {
+    max-width: 310px;
+    max-height: 310px;
+    border-radius: 40px;
+  }
+
+  .details {
+    text-align: left;
+    max-width: 438px;
+  }
+
+  .title {
+    margin: 0 0 12px;
+    @include inter (24px, 600, 30px);
+  }
+
+  .description {
+    margin: 0 0 20px;
+    @include inter (16px, 400, 24px);
+  }
+
+  .size_title {
+    margin: 0 0 8px;
+    @include inter (16px, 400, 24px);
+  }
+
+  .size_choice {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .total,
+  .sum {
+    margin: 0;
+    @include inter (24px, 600, 30px);
+  }
+
+  .total_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 12px;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+
+      background-color: $color-dark-light;
+    }
+  }
+
+  .warning {
+    position: relative;
+    margin: 0 0 32px;
+    padding-left: 24px;
+    max-width: fit-content;
+    @include inter (10px, 600, 14px);
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: url('../../../Assets/info-icon.svg') no-repeat;
+    }
+  }
+
+  .close {
+    padding: 10px 0;
+    width: 100%;
+
+    background-color: transparent;
+    border: 1px solid $color-dark-brown;
+    border-radius: 100px;
+    transition: 0.3s ease;
+
+    @include inter (16px, 600, 24px);
+
+    &:hover {
+      background-color: $color-dark-brown;
+      color: $color-light;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}

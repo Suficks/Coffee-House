@@ -20,53 +20,6 @@
     margin-bottom: 40px;
   }
 
-  .filter {
-    position: relative;
-    padding: 10px 13px 10px 47px;
-
-    background-color: transparent;
-    border: 1px solid $color-dark-light;
-    border-radius: 100px;
-    transition: 0.4s ease;
-
-    @include inter (16px, 600, 24px);
-    color: $color-dark;
-
-    &:before {
-      position: absolute;
-      top: 50%;
-      left: 8px;
-      transform: translateY(-50%);
-      content: '';
-
-      background-color: $color-dark-light;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      transition: 0.4s ease;
-    }
-
-    &:after {
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      transform: translateY(-50%);
-
-      content: '';
-      width: 16px;
-      height: 17px;
-    }
-
-    &:hover {
-      background-color: $color-dark-brown;
-      color: $color-light;
-    }
-
-    &:hover:before {
-      background-color: $color-light;
-    }
-  }
-
   .coffee {
     &:after {
       background: url('../../Assets/coffee-icon.svg') no-repeat;
@@ -141,10 +94,5 @@
   .cost {
     margin: 0;
     @include inter (24px, 600, 30px);
-  }
-
-  .active {
-    background-color: $color-dark-brown;
-    color: $color-light;
   }
 }

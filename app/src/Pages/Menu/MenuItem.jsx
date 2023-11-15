@@ -1,10 +1,14 @@
-const MenuItem = ({ typeProduct }) => (
-  typeProduct.map((option, index) => {
+const MenuItem = ({ setActive, typeProduct, setItem }) => {
+
+  return typeProduct.map((option, index) => {
     const { img, name, description, cost } = option;
 
     return (
       <div className="menuItem" key={index}>
-        <div className="wrap">
+        <div className="wrap" onClick={() => {
+          setActive(true)
+          setItem(option)
+        }}>
           <img src={img} alt="product" className="itemPic" />
         </div>
         <div className="info">
@@ -16,6 +20,6 @@ const MenuItem = ({ typeProduct }) => (
     )
   }
   )
-)
+}
 
 export default MenuItem;
