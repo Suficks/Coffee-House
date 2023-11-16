@@ -1,6 +1,7 @@
 @import '../../Styles';
 
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,5 +70,47 @@
     &:after {
       transform: scaleX(1);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav {
+      z-index: 2;
+
+      padding: 80px 0 0;
+
+      background-color: $color-light;
+      transition: 0.5s ease;
+      transform: translateX(400%);
+    }
+
+    .link {
+      margin-right: auto;
+    }
+
+    .list {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      @include inter (32px, 600, 40px);
+    }
+
+    .menuLink {
+      width: 143px;
+      z-index: 2;
+      margin-top: 100px;
+
+      @include inter (32px, 600, 40px);
+      background: url('../../Assets/big-cup.svg') no-repeat 100%;
+    }
+  }
+
+  .nav_active {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
   }
 }

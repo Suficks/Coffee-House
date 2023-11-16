@@ -1,0 +1,57 @@
+@import '../../Styles';
+
+.burger {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid $color-dark-brown;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: none;
+
+  .line {
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    display: block;
+
+    width: 16px;
+    height: 1.5px;
+
+    transition: 0.3s ease;
+    background-color: $color-dark;
+  }
+
+  .second {
+    top: 55%;
+  }
+}
+
+.burger_active {
+  display: block;
+}
+
+.burger_close {
+  .line {
+    transform: rotate(45deg) translate(0);
+  }
+
+  .second {
+    top: 55%;
+    transform: rotate(-45deg) translate(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+}
