@@ -113,6 +113,55 @@
       color: $color-light;
     }
   }
+
+  .size,
+  .add {
+    &:after {
+      height: 24px;
+    }
+
+    &:hover:after {
+      color: $color-dark;
+    }
+  }
+
+  .small {
+    &:after {
+      content: 'S';
+    }
+  }
+
+  .medium {
+    &:after {
+      content: 'M';
+    }
+  }
+
+  .large {
+    &:after {
+      content: 'L';
+    }
+  }
+
+  .add {
+    &:first-child {
+      &:after {
+        content: '1';
+      }
+    }
+
+    &:nth-child(2) {
+      &:after {
+        content: '2';
+      }
+    }
+
+    &:last-child {
+      &:after {
+        content: '3';
+      }
+    }
+  }
 }
 
 .active {

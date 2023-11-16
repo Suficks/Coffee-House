@@ -1,7 +1,7 @@
 const MenuItem = ({ setActive, typeProduct, setProduct }) => {
 
   return typeProduct.map((option, index) => {
-    const { img, name, description, cost } = option;
+    const { img, name, description, costLabel } = option;
 
     return (
       <div className="menuItem" key={index}>
@@ -14,7 +14,7 @@ const MenuItem = ({ setActive, typeProduct, setProduct }) => {
         <div className="info">
           <h3 className="name">{name}</h3>
           <p className="description">{description}</p>
-          <p className="cost">{cost}</p>
+          <p className="cost">{costLabel}</p>
         </div>
       </div>
     )
