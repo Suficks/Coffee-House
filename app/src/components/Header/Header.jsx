@@ -23,7 +23,7 @@ const Header = ({ location }) => {
           <li className="item" onClick={() => scrollToSection('contact')}>Contact us</li>
         </ul>
       </nav>
-      <Link to="/menu" className={`menuLink ${location === '/menu' ? 'menuLinkActive' : null}`}>Menu</Link>
+      <Link to="/menu" className={`menuLink ${location === '/menu' ? 'menuLinkActive' : ''}`}>Menu</Link>
     </header>
   )
 }

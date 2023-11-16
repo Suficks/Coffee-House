@@ -9,8 +9,9 @@ const Favorite = () => {
       <div className="slider">
         <Slider
           dots={true}
-          infinite={false}
-          speed={600}
+          autoplay={true}
+          autoplaySpeed={4000}
+          infinite={true}
           slidesToShow={1}
           slidesToScroll={1}
         >

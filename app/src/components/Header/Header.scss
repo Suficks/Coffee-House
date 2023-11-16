@@ -64,12 +64,10 @@
   }
 
   .menuLinkActive {
+    pointer-events: none;
+
     &:after {
       transform: scaleX(1);
-    }
-
-    &:hover:after {
-      animation: unset;
     }
   }
 }
