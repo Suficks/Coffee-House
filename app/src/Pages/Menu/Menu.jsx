@@ -45,6 +45,11 @@ const Menu = () => {
     modalActive ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden');
   }, [modalActive]);
 
+  useEffect(() => {
+    if (!isMobile) setCardsPart(cards);
+    else setCardsPart(cards.slice(0, CARDS_SHOW_COUNT))
+  }, [isMobile, cards]);
+
   return (
     <main className="menu">
       <h2 className="title">Behind each of our cups hides an <span className="italic">amazing surprise</span></h2>
