@@ -1,5 +1,6 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import useMedia from '../../Hooks/useMedia';
 import './menu.scss';
 
 import MenuItem from './MenuItem';
@@ -18,7 +19,15 @@ const Menu = () => {
   const [typeProduct, setTypeProduct] = useState('coffee');
   const [modalActive, setModalActive] = useState(false);
   const [product, setProduct] = useState({});
+  const [showMore, setShowMore] = useState(false);
   const nodeRef = useRef();
+
+  const isMobile = useMedia('(max-width: 768px)');
+  const isShowMore = isMobile === false && showMore === false;
+
+  useEffect(() => {
+    modalActive ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden');
+  }, [modalActive]);
 
   return (
     <main className="menu">
@@ -55,6 +64,7 @@ const Menu = () => {
           </div>
         </CSSTransition>
       </SwitchTransition>
+      <button className={isShowMore ? 'show_more' : 'show_more show_more_active'} onClick={() => setShowMore(true)}></button>
       <Modal active={modalActive} setActive={setModalActive} typeProduct={typeProduct} product={product} />
     </main>
   )

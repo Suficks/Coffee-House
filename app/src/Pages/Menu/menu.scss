@@ -46,14 +46,17 @@
 
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     grid-gap: 40px;
 
     color: $color-dark
   }
 
   .menuItem {
+    margin: auto;
     height: 506px;
+    max-width: 310px;
+
     box-sizing: border-box;
     border-radius: 40px;
     text-align: start;
@@ -78,6 +81,7 @@
 
   .itemPic {
     max-width: 100%;
+
     transition: 0.5s ease;
     transform: scale(1.1);
 
@@ -100,5 +104,57 @@
   .cost {
     margin: 0;
     @include inter (24px, 600, 30px);
+  }
+
+  .show_more {
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    background-color: transparent;
+    border: 1px solid $color-dark-brown;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    display: none;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url('../../Assets/refresh.svg') no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background-color: $color-dark-brown;
+    }
+
+    &:hover:after {
+      filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(197%) hue-rotate(345deg) brightness(94%) contrast(88%);
+    }
+  }
+
+  .show_more_active {
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-column-gap: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .title {
+      @include inter (32px, 600, 40px);
+    }
+
+    .filter_container {
+      gap: 7px;
+    }
   }
 }

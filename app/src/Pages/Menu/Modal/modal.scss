@@ -50,6 +50,7 @@
 
   .size_choice {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 20px;
   }
@@ -162,9 +163,28 @@
       }
     }
   }
+
+  @media screen and (max-width: 767px) {
+    .pic {
+      display: none;
+    }
+  }
 }
 
 .active {
   opacity: 1;
   pointer-events: all;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal {
+    max-width: 688px;
+    gap: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 342px;
+  }
 }
