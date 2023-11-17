@@ -1,6 +1,5 @@
-const MenuItem = ({ setActive, typeProduct, setProduct }) => {
-
-  return typeProduct.map((option, index) => {
+const MenuItem = ({ setActive, cards, setProduct }) => {
+  return cards.map((option, index) => {
     const { img, name, description, costLabel } = option;
 
     return (
