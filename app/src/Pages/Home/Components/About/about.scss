@@ -40,4 +40,24 @@
       transform: scale(1);
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .small {
+      display: none;
+    }
+
+    .wrap {
+      margin: auto;
+      max-width: 688px;
+      width: 100%;
+    }
+
+    .box {
+      gap: 0;
+    }
+  }
 }

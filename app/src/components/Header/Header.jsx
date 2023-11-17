@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './header.scss';
 
@@ -8,10 +8,18 @@ import Burger from '../Burger';
 const Header = ({ location }) => {
   const [burgerActive, setBurgerActive] = useState(false);
 
+  window.addEventListener('resize', () => {
+    setBurgerActive(false)
+  })
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     section?.scrollIntoView();
   };
+
+  useEffect(() => {
+    burgerActive ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden');
+  }, [burgerActive]);
 
   return (
     <header className="header">

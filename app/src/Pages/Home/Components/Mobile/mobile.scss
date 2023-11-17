@@ -37,10 +37,10 @@
     &:hover {
       background-color: $color-dark-brown;
     }
+  }
 
-    &:last-child {
-      margin-left: 20px;
-    }
+  .google {
+    margin-left: 20px;
   }
 
   .storeImg {
@@ -48,6 +48,21 @@
 
     &:hover {
       filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(197%) hue-rotate(345deg) brightness(94%) contrast(88%);
+    }
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .mobile {
+    flex-direction: column;
+
+    .info {
+      max-width: 100%;
+      margin-bottom: 93px;
+    }
+
+    .title {
+      margin-bottom: 40px;
     }
   }
 }
