@@ -121,4 +121,18 @@
     max-width: 480px;
     @include inter (16px, 400, 24px);
   }
+
+  @media screen and (max-width: 767px) {
+    .title {
+      @include inter (32px, 600, 40px);
+    }
+
+    .item {
+      max-width: 348px;
+    }
+
+    .slick-list {
+      margin: 0;
+    }
+  }
 }

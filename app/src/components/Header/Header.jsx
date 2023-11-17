@@ -66,7 +66,12 @@ const Header = ({ location }) => {
           </li>
         </ul>
       </nav>
-      <Link to="/menu" className={`menuLink ${location === '/menu' ? 'menuLinkActive' : ''} ${burgerActive ? 'nav_active' : ''}`}>Menu</Link>
+      <Link to="/menu"
+        className={`menuLink ${location === '/menu' ? 'menuLinkActive' : ''} ${burgerActive ? 'nav_active' : ''}`}
+        onClick={() => setBurgerActive(false)}
+      >
+        Menu
+      </Link>
       <Burger burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
     </header>
   )

@@ -32,6 +32,7 @@
   }
 
   .aboutPic {
+    width: 100%;
     object-fit: cover;
     transition: 0.5s ease;
     transform: scale(1.1);
@@ -46,7 +47,7 @@
       grid-template-columns: 1fr;
     }
 
-    .small {
+    .small_wrap {
       display: none;
     }
 
@@ -58,6 +59,24 @@
 
     .box {
       gap: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .title {
+      @include inter (32px, 600, 40px);
+    }
+
+    .wrap {
+      margin: auto;
+      max-width: calc(348px + (688 - 348) * ((100vw - 380px) / (767 - 380)));
+      height: 590px;
+      width: 100%;
+    }
+
+    .aboutPic {
+      max-width: calc(348px + (688 - 348) * ((100vw - 380px) / (767 - 380)));
+      height: 100%;
     }
   }
 }

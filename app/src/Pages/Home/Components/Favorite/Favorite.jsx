@@ -14,6 +14,14 @@ const Favorite = () => {
           infinite={true}
           slidesToShow={1}
           slidesToScroll={1}
+          responsive={[
+            {
+              breakpoint: 767,
+              settings: {
+                arrows: false,
+              }
+            }
+          ]}
         >
           {options.map((option, index) => {
             const { img, name, description, cost } = option;

@@ -25,6 +25,7 @@
   .store {
     padding: 0;
     display: inline-block;
+    margin-right: 20px;
 
     border-radius: 100px;
     border: none;
@@ -39,10 +40,6 @@
     }
   }
 
-  .google {
-    margin-left: 20px;
-  }
-
   .storeImg {
     transition: 0.3s ease;
 
@@ -50,12 +47,8 @@
       filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(197%) hue-rotate(345deg) brightness(94%) contrast(88%);
     }
   }
-}
 
-@media screen and (max-width: 1130px) {
-  .mobile {
-    flex-direction: column;
-
+  @media screen and (max-width: 1130px) {
     .info {
       max-width: 100%;
       margin-bottom: 93px;
@@ -64,5 +57,29 @@
     .title {
       margin-bottom: 40px;
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    .title {
+      @include inter (32px, 600, 40px);
+    }
+
+    .store {
+      margin-bottom: 20px;
+    }
+
+    .screens {
+      max-width: 348px;
+    }
+
+    .info {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .mobile {
+    flex-direction: column;
   }
 }

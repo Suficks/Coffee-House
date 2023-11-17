@@ -13,12 +13,12 @@ const About = () => {
           <div className="wrap">
             <img src={About1} className="aboutPic" alt="aboutPic" />
           </div>
-          <div className="wrap">
+          <div className="wrap small_wrap">
             <img src={About2} className="aboutPic small" alt="aboutPic" />
           </div>
         </div>
         <div className="box">
-          <div className="wrap">
+          <div className="wrap small_wrap">
             <img src={About3} className="aboutPic small" alt="aboutPic" />
           </div>
           <div className="wrap">

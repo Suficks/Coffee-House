@@ -62,10 +62,28 @@
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    .title {
+      @include inter (42px, 600, 48.3px);
+    }
+
+    .subtitle {
+      margin-bottom: 39px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .enjoy {
     padding: 100px 60px;
+    background: url('../../../../Assets/main.png') no-repeat 50%;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .enjoy {
+    padding: 60px 16px;
   }
 }
