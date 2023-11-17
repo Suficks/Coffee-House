@@ -3,7 +3,7 @@
 .burger {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 30px;
   transform: translateY(-50%);
 
   box-sizing: border-box;
@@ -24,7 +24,7 @@
     display: block;
 
     width: 16px;
-    height: 1.5px;
+    height: 1px;
 
     transition: 0.3s ease;
     background-color: $color-dark;
@@ -41,12 +41,13 @@
 
 .burger_close {
   .line {
-    transform: rotate(45deg) translate(0);
+    top: 69%;
+    transform: rotate(45deg) translate(-75%);
   }
 
   .second {
-    top: 55%;
-    transform: rotate(-45deg) translate(0);
+    top: 27%;
+    transform: rotate(-45deg) translate(-73%);
   }
 }
 

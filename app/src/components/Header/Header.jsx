@@ -20,13 +20,45 @@ const Header = ({ location }) => {
       </Link>
       <nav className={`nav ${burgerActive ? 'nav_active' : ''}`}>
         <ul className="list">
-          <li className="item" onClick={() => scrollToSection('favorite')}>Favorite coffee</li>
-          <li className="item" onClick={() => scrollToSection('about')}>About</li>
-          <li className="item" onClick={() => scrollToSection('mobile')}>Mobile app</li>
-          <li className="item" onClick={() => scrollToSection('contact')}>Contact us</li>
+          <li
+            className="item"
+            onClick={() => {
+              scrollToSection('favorite')
+              setBurgerActive(false)
+            }}
+          >
+            Favorite coffee
+          </li>
+          <li
+            className="item"
+            onClick={() => {
+              scrollToSection('about')
+              setBurgerActive(false)
+            }}
+          >
+            About
+          </li>
+          <li
+            className="item"
+            onClick={() => {
+              scrollToSection('mobile')
+              setBurgerActive(false)
+            }}
+          >
+            Mobile app
+          </li>
+          <li
+            className="item"
+            onClick={() => {
+              scrollToSection('contact')
+              setBurgerActive(false)
+            }}
+          >
+            Contact us
+          </li>
         </ul>
       </nav>
-      <Link to="/menu" className={`menuLink ${location === '/menu' ? 'menuLinkActive' : ''}`}>Menu</Link>
+      <Link to="/menu" className={`menuLink ${location === '/menu' ? 'menuLinkActive' : ''} ${burgerActive ? 'nav_active' : ''}`}>Menu</Link>
       <Burger burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
     </header>
   )

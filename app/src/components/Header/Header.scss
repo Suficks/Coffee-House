@@ -74,9 +74,15 @@
 
   @media screen and (max-width: 768px) {
     .nav {
+      position: absolute;
+      top: 60px;
+      left: 50%;
       z-index: 2;
+      height: 100vh;
+      width: 100vw;
 
       padding: 80px 0 0;
+      box-sizing: border-box;
 
       background-color: $color-light;
       transition: 0.5s ease;
@@ -95,9 +101,15 @@
     }
 
     .menuLink {
+      position: absolute;
+      top: 480px;
+      left: 50%;
       width: 143px;
       z-index: 2;
       margin-top: 100px;
+
+      transition: 0.5s ease;
+      transform: translateX(3000%);
 
       @include inter (32px, 600, 40px);
       background: url('../../Assets/big-cup.svg') no-repeat 100%;
@@ -105,12 +117,6 @@
   }
 
   .nav_active {
-    transform: translateX(0);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    flex-direction: column;
+    transform: translateX(-50%);
   }
 }
