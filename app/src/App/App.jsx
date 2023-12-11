@@ -3,8 +3,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import './app.scss';
 
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Home from '../Pages/Home';
 import Menu from '../Pages/Menu';
 
